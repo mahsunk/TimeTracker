@@ -1,10 +1,30 @@
 {
   "expo": {
-    "scheme": "acme",
+    "name": "TimeTracker",
+    "slug": "TimeTracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "WAKE_LOCK",
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
     "plugins": [
       "expo-router"
     ],
-    "name": "TimeTracker",
-    "slug": "TimeTracker"
+    "scheme": "timetracker"
   }
 }

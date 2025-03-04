@@ -1,0 +1,118 @@
+# Cursor Rules Configuration
+
+---
+name: "Project Rules"
+description: "Main configuration for the project"
+globs: ["**/*.{ts,tsx,js,jsx}"]
+rules:
+  - name: "Expo Best Practices"
+    description: "Rules for Expo development"
+    pattern: "**/*.{ts,tsx}"
+    suggestions:
+      - message: "Use expo-updates for OTA updates"
+        replacement: "import * as Updates from 'expo-updates';"
+      
+  - name: "React Native Best Practices"
+    description: "Rules for React Native development"
+    pattern: "**/*.{ts,tsx}"
+    suggestions:
+      - message: "Use safe-area-context"
+        replacement: "import { SafeAreaView } from 'react-native-safe-area-context';"
+
+  - name: "TypeScript Standards"
+    description: "TypeScript coding standards"
+    pattern: "**/*.ts"
+    suggestions:
+      - message: "Use strict null checks"
+        pattern: "null"
+        replacement: "undefined"
+
+settings:
+  typescript:
+    strict: true
+    strictNullChecks: true
+  formatting:
+    indentSize: 2
+    useTabs: false
+    maxLineLength: 100
+
+Before diving into the best practices, please note that you may need to adapt the globs depending on your project's specific structure and file types.
+
+---
+name: expo-best-practices.mdc
+description: Best practices for Expo applications
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Use `expo-updates` for OTA updates to keep your app current without app store submissions
+- Leverage `expo-linking` for deep linking to enhance user navigation
+- Implement `expo-notifications` for cross-platform push notifications
+- Use `expo-splash-screen` to create engaging app launch experiences
+
+---
+name: react-native-best-practices.mdc
+description: Best practices for React Native development
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Optimize performance with `react-native-reanimated` for smooth animations
+- Use `react-native-gesture-handler` for advanced gesture recognition
+- Implement `react-native-safe-area-context` to handle screen insets on different devices
+- Utilize `react-native-screens` for improved navigation performance
+
+---
+name: react-native-paper-best-practices.mdc
+description: Best practices for using React Native Paper
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Use the theme system to maintain consistent styling across your app
+- Leverage pre-built components to speed up development and ensure consistency
+- Customize components using the provided props and styles for flexibility
+
+---
+name: date-fns-best-practices.mdc
+description: Best practices for using date-fns in JavaScript/TypeScript
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Use `date-fns` for lightweight date manipulation and formatting
+- Prefer functional programming approach with `date-fns` for better code readability
+- Utilize locale support for internationalization of date and time
+
+---
+name: i18n-js-best-practices.mdc
+description: Best practices for internationalization with i18n-js
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- Use `i18n-js` for managing translations and supporting multiple languages
+- Implement lazy loading of translations to improve initial load times
+- Use interpolation for dynamic content within translations
+
+---
+name: typescript-best-practices.mdc
+description: TypeScript coding standards and type safety guidelines
+globs: **/*.{ts,tsx}
+---
+
+- Use strict null checks to prevent null or undefined errors
+- Prefer interfaces over types for better extensibility
+- Implement type guards and assertions for runtime type checking
+- Use type inference to reduce unnecessary type annotations
+
+#Hata Çözümü 
+-Kullanıcının geçmiş hatalarını ve çözümlerini saklamak için knowledge-base.nd dosyasını kullan. 
+-Bir hata tespit edildiğinde önce knowledge-base.md dosyasına bak. 
+-Eğer hata için bir kayıt varsa, doğrudan önerilen çözümü kullan. 
+-Eğer hata yeni bir hata ise, çözüme ulaştığında bunu knowledge-base.md dosyasına kaydet. 
+ 
+Kayıt formatı şu şekilde olmalı: 
+
+    ##[Hata Mesajı]
+ 
+Çözüm: [Çözüm Açıklaması]
+ 
+Kullanıcı aynı habayı tekrar sorarsa, önce bu dosyayı kontrol et ve eğer çözüm varsa doğrudan yanıt ver. 
+  
+Eğer dosyada kayıtlı değilse, en iyi çözümü üret ve yeni bir kayıt oluştur.
