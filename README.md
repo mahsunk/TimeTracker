@@ -25,7 +25,7 @@ Zaman takibi yapmak için geliştirilmiş bir mobil uygulama.
 
 1. Repoyu klonlayın:
 ```bash
-git clone https://github.com/KULLANICI_ADINIZ/TimeTracker.git
+git clone https://github.com/mahsunk/TimeTracker.git
 ```
 
 2. Proje dizinine gidin:
